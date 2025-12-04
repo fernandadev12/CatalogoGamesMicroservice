@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CatalogoGames.API/CatalogoGames.API.csproj" />
+  <Project Path="CatalogoGames.Application/CatalogoGames.Application.csproj" />
+  <Project Path="CatalogoGames.Domain/CatalogoGames.Domain.csproj" />
+  <Project Path="CatalogoGames.Infra/CatalogoGames.Infra.csproj" />
+</Solution>
