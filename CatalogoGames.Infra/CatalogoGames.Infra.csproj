@@ -6,4 +6,24 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.20.1" />
+    <PackageReference Include="MediatR" Version="14.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.22">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.22">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CatalogoGames.Application\CatalogoGames.Application.csproj" />
+    <ProjectReference Include="..\CatalogoGames.Domain\CatalogoGames.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
