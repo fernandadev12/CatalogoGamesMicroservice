@@ -1,7 +1,7 @@
 # 🎮 Catálogo de Games - Microserviço .NET 8
 
 Microserviço desenvolvido em **.NET 8** utilizando os padrões **DDD**, **CQRS** e **MediatR**, com arquitetura em camadas (Api, Application, Domain, Infra).  
-Persistência realizada com **SQLite** e integração com **Azure Service Bus** para recebimento de eventos de jogos.
+Persistência realizada com **SQLite** e integração para recebimento de eventos de jogos.
 
 ---
 
@@ -12,7 +12,7 @@ Persistência realizada com **SQLite** e integração com **Azure Service Bus** 
 - **CQRS (Command Query Responsibility Segregation)**
 - **MediatR** para orquestração de comandos e queries
 - **Entity Framework Core** com **SQLite**
-- **Azure Service Bus** para mensageria
+- Mensageria
 - **Minimal API** com Swagger para documentação
 
 ---
@@ -21,7 +21,7 @@ Persistência realizada com **SQLite** e integração com **Azure Service Bus** 
 src/ Catalogo.Api/  -> Endpoints HTTP (Minimal API, Swagger, HealthChecks) 
 Catalogo.Application/  -> Casos de uso (CQRS, Handlers, DTOs, validações) 
 Catalogo.Domain/ -> Entidades, agregados, value objects, interfaces de repositórios 
-Catalogo.Infra/  -> EF Core, repositórios, DbContext, integração com Azure Service Bus
+Catalogo.Infra/  -> EF Core, repositórios, DbContext
 
 
 ---
@@ -34,3 +34,4 @@ O projeto utiliza **SQLite**. O arquivo `catalogo.db` será criado automaticamen
 ```bash
 dotnet ef migrations add InitialCreate -p Catalogo.Infra -s Catalogo.Api
 dotnet ef database update -p Catalogo.Infra -s Catalogo.Api
+
