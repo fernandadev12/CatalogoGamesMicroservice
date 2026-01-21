@@ -11,7 +11,7 @@
         public DateTime ReleaseDate { get; private set; }
 
         private Game() { } // EF
-        public Game(string title, string platform, decimal price, DateTime releaseDate, string? description = null, string? publisher = null)
+        public Game(string title, string platform, decimal price, DateTime releaseDate, string? description, string? publisher)
         {
             Id = Guid.NewGuid();
             Update(title, platform, price, releaseDate, description, publisher);

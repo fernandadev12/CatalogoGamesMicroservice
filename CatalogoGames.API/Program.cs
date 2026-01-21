@@ -1,4 +1,3 @@
-// Catalogo.Api/Program.cs
 using Azure.Messaging.ServiceBus;
 using Catalogo.Infra.Messaging;
 using Catalogo.Infra.Persistence;
@@ -19,9 +18,6 @@ ConfigurePipeline(app);
 
 app.Run();
 
-
-// ---------------- Métodos auxiliares ----------------
-
 static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
 {
     // EF Core + SQLite
@@ -35,15 +31,7 @@ static void ConfigureServices(IServiceCollection services, IConfiguration config
     // MediatR (scan no assembly da Application)
     services.AddMediatR(cfg =>
         cfg.RegisterServicesFromAssemblyContaining<CatalogoGames.Application.Games.Commands.CreateGameCommand>());
-
-    // Azure Service Bus
-    var sbConn = configuration.GetConnectionString("ServiceBus");
-    var sbQueue = configuration["ServiceBus:QueueName"];
-    services.AddSingleton(new ServiceBusClient(sbConn));
-    services.AddSingleton<GameEventsConsumer>(sp =>
-        new GameEventsConsumer(sp.GetRequiredService<ServiceBusClient>(),
-                               sp.GetRequiredService<IMediator>(),
-                               sbQueue!));
+    
 
     // Controllers + Swagger + HealthChecks
     services.AddControllers();

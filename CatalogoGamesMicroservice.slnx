@@ -1,7 +1,0 @@
-<Solution>
-  <Project Path="CatalogoGames.API/CatalogoGames.API.csproj" />
-  <Project Path="CatalogoGames.Application/CatalogoGames.Application.csproj" />
-  <Project Path="CatalogoGames.Domain/CatalogoGames.Domain.csproj" />
-  <Project Path="CatalogoGames.Infra/CatalogoGames.Infra.csproj" />
-  <Project Path="CatalogoGames.Test/CatalogoGames.Test.csproj" Id="22273ad2-cb40-4a03-b5c2-4ecaa017d1ac" />
-</Solution>
